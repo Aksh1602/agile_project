@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Campus Bites - Food Delivery</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="./src/index.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="bi bi-truck"></i> Campus Bites
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#restaurants">Restaurants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#orders">My Orders</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <button class="btn btn-link position-relative me-3">
+              <i class="bi bi-cart fs-5 text-warning"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                3
+              </span>
+            </button>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pt-4">
+      <!-- Hero Section -->
+      <section class="py-5 text-center hero-section rounded-3 mb-5">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-bold text-warning">Hungry? We've got you covered!</h1>
+            <p class="lead">Order from your favorite campus restaurants and get food delivered right to your location.</p>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search for restaurants or dishes...">
+              <button class="btn btn-primary" type="button">Search</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="mb-5">
+        <h2 class="mb-4 text-warning">Food Categories</h2>
+        <div class="row g-4">
+          <!-- Indian Categories -->
+          <div class="col-6 col-md-3">
+            <div class="card h-100 category-card">
+              <div class="card-body text-center">
+                <i class="bi bi-fire fs-1"></i>
+                <h5 class="mt-3">North Indian</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card h-100 category-card">
+              <div class="card-body text-center">
+                <i class="bi bi-cup-straw fs-1"></i>
+                <h5 class="mt-3">South Indian</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card h-100 category-card">
+              <div class="card-body text-center">
+                <i class="bi bi-egg-fried fs-1"></i>
+                <h5 class="mt-3">Street Food</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card h-100 category-card">
+              <div class="card-body text-center">
+                <i class="bi bi-cup fs-1"></i>
+                <h5 class="mt-3">Biryani</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Other Categories -->
+          <div class="col-6 col-md-3">
+            <div class="card h-100 category-card">
+              <div class="card-body text-center">
+                <i class="bi bi-egg fs-1"></i>
+                <h5 class="mt-3">Breakfast</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card h-100 category-card">
+              <div class="card-body text-center">
+                <i class="bi bi-cup-hot fs-1"></i>
+                <h5 class="mt-3">Beverages</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card h-100 category-card">
+              <div class="card-body text-center">
+                <i class="bi bi-pizza fs-1"></i>
+                <h5 class="mt-3">Fast Food</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card h-100 category-card">
+              <div class="card-body text-center">
+                <i class="bi bi-shop fs-1"></i>
+                <h5 class="mt-3">Snacks</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Restaurants -->
+      <section class="mb-5">
+        <h2 class="mb-4 text-warning">Featured Restaurants</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 food-card">
+              <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe" class="card-img-top" alt="Restaurant" style="height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe" class="restaurant-logo me-3" alt="Logo">
+                  <div>
+                    <h5 class="card-title mb-0 text-warning">Spice Garden</h5>
+                    <p class="text-muted mb-0">North Indian • Curry • Tandoor</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-warning text-dark">4.7 <i class="bi bi-star-fill"></i></span>
+                  <span class="text-muted">20-30 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 food-card">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" class="card-img-top" alt="Restaurant" style="height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" class="restaurant-logo me-3" alt="Logo">
+                  <div>
+                    <h5 class="card-title mb-0 text-warning">Burger Spot</h5>
+                    <p class="text-muted mb-0">American • Burgers</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-warning text-dark">4.8 <i class="bi bi-star-fill"></i></span>
+                  <span class="text-muted">15-25 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 food-card">
+              <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84" class="card-img-top" alt="Restaurant" style="height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84" class="restaurant-logo me-3" alt="Logo">
+                  <div>
+                    <h5 class="card-title mb-0 text-warning">Dosa House</h5>
+                    <p class="text-muted mb-0">South Indian • Dosa • Idli</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-warning text-dark">4.6 <i class="bi bi-star-fill"></i></span>
+                  <span class="text-muted">20-35 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-bottom border-warning">
+            <h5 class="modal-title text-warning">Login</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label text-warning">Email address</label>
+                <input type="email" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-warning">Password</label>
+                <input type="password" class="form-control" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-bottom border-warning">
+            <h5 class="modal-title text-warning">Create Account</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label text-warning">Full Name</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-warning">Email address</label>
+                <input type="email" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-warning">Password</label>
+                <input type="password" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-warning">Confirm Password</label>
+                <input type="password" class="form-control" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Create Account</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 mt-5">
+      <div class="container text-center">
+        <p class="mb-0 text-warning">© 2023 Campus Bites. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
